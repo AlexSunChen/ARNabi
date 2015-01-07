@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="blue" type="color">#44ccdd</item>
+    <item name="light_blue" type="color">#ff89dee8</item>
+    <item name="outer_road" type="color">#991C7B86</item>
+    <item name="inner_road" type="color">#cc52CFDB</item>
+    <item name="road_border" type="color">#4d123D46</item>
+    <item name="road_arrow" type="color">#e6C9EEED</item>
+</resources>

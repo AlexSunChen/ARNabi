@@ -1,0 +1,169 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rootContainer">
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="jp.campus_ar.campusar.layer.MapLayer"
+        android:id="@+id/mapLayer"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:id="@+id/backgroundImage"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/toolbar_back"
+        android:scaleType="fitXY"
+        android:layout_margin="5dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="15dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_height="@dimen/toolbar_size">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/queryTextField"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:scrollHorizontally="true"
+                android:ellipsize="end"
+                android:autoText="false"
+                android:nextFocusUp="@+id/queryTextField"
+                android:nextFocusLeft="@+id/queryTextField"
+                android:background="#0000"
+                android:textSize="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"/>
+
+            <ImageButton
+                android:layout_width="@dimen/toolbar_size"
+                android:layout_height="@dimen/toolbar_size"
+                android:id="@+id/routeButton"
+                android:src="@drawable/toolbar_route"
+                android:background="#0000"
+                android:scaleType="fitXY"/>
+
+            <ImageButton
+                android:layout_width="@dimen/toolbar_size"
+                android:layout_height="@dimen/toolbar_size"
+                android:id="@+id/favoriteButton"
+                android:src="@drawable/toolbar_favorite_off"
+                android:background="#0000"
+                android:scaleType="fitXY"/>
+
+            <ImageButton
+                android:layout_width="@dimen/toolbar_size"
+                android:layout_height="@dimen/toolbar_size"
+                android:id="@+id/cancelButton"
+                android:background="#0000"
+                android:src="@drawable/toolbar_close"
+                android:scaleType="fitXY"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/infoContainer">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Detail"
+                android:singleLine="true"
+                android:scrollHorizontally="true"
+                android:ellipsize="end"
+                android:id="@+id/detailLabel"
+                android:layout_weight="2"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="0 m"
+                android:singleLine="true"
+                android:scrollHorizontally="true"
+                android:ellipsize="end"
+                android:id="@+id/distanceLabel"
+                android:layout_weight="1"
+                android:gravity="right"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/menuCoverButton"
+        android:background="#7000"
+        />
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="70dp"
+        android:id="@+id/knobButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="60dp"
+        android:src="@drawable/knob"
+        android:background="#0000"
+        android:scaleType="fitStart"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="-200dp"
+        android:id="@+id/menuContainer"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="jp.campus_ar.campusar.layer.MenuLayer"
+            android:id="@+id/menuLayer"
+            />
+    </LinearLayout>
+
+    <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="jp.campus_ar.campusar.layer.PopUpStreetViewLayer"
+            android:id="@+id/popUpStreetViewLayer"
+            />
+
+    <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="jp.campus_ar.campusar.layer.PreviewStreetViewLayer"
+            android:id="@+id/previewStreetViewLayer"
+            />
+
+    <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="jp.campus_ar.campusar.layer.ARLayer"
+            android:id="@+id/arLayer"
+            />
+</RelativeLayout>
